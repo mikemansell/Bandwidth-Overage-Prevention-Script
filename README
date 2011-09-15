@@ -1,0 +1,17 @@
+The purpose of this script is to monitor bandwidth on a server and take a specific action
+whenever said server goes over a pre-defined monthly bandwidth cap.  The original reason 
+that I wrote this script was so that I could safely utilize a service such as Rackspace
+CloudServers for a personal Irssi session without having to worry about incurring huge
+bandwidth fees if someone were to attempt denial of service on my server.  In my example,
+I use the command "iptables-restore < /etc/firewall-lockdown.conf" to apply a locked-down
+IPTables ruleset that blocks ALL traffic if I go over my self-set cap, however you may
+opt to simply use the "shutdown" command to power down the server.
+
+The script requires "screen" to run in daemon mode and "vnstat" to monitor network traffic.
+
+IT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE;
